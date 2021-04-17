@@ -5,7 +5,7 @@ import os
 
 app = Flask(__name__)
 
-file_path = os.path.abspath(os.getcwd())+"\db\database.db"
+file_path = os.path.abspath(os.getcwd())+"\database.db"
 # 'sqlite:///'+file_path'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'+file_path
 db = SQLAlchemy(app)
