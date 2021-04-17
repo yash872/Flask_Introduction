@@ -9,7 +9,8 @@ file_path = os.path.abspath(os.getcwd())+"\db\database.db"
 # 'sqlite:///'+file_path'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'+file_path
 db = SQLAlchemy(app)
-    
+
+   
 
 class Todo(db.Model):
     id = db.Column(db.Integer,primary_key=True)
@@ -63,6 +64,8 @@ def update(id):
             return 'There was a problem in Updating that Task !!'
     else:
         return render_template('update.html',task = task)
+
+
 
 
 if __name__ == "__main__":
