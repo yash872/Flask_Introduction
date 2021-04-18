@@ -4,10 +4,10 @@ from datetime import datetime
 import os
 
 app = Flask(__name__)
-
-file_path = os.path.abspath(os.getcwd())+"\database.db"
+app.config['DEBUG']= True
+# file_path = os.path.abspath(os.getcwd())+"\"
 # 'sqlite:///'+file_path'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'+file_path
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 db = SQLAlchemy(app)
 
    
